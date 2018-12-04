@@ -20,24 +20,22 @@ int main()
    if (F_0 == F_1 == 0)
    {
       cout << "constant\n";
-      cout << "(|0> + |1>)/sqrt(2)\n";
+      cout << "|0> xor (|0> - |1>)/sqrt(2)\n";
    }
    else if (F_0 == F_1 == 1)
    {
       cout << "constant\n";
-      cout << "-(|0> + |1>)/sqrt(2)\n";
+      cout << "-|0> xor (|0> - |1>)/sqrt(2)\n";
    }
    else if (F_0 == 0 && F_1 == 1)
    {
       cout << "balanced\n";
-      cout << "( (-1)^f(0)|0> + (-1)^f(1)|1> )/sqrt(2)\n";
-      cout <<  "= (|0> - |1>)/sqrt(2)\n";
+      cout << "|1> xor (|0> - |1>)/sqrt(2)\n";
    }
    else if (F_0 == 1 && F_1 == 0)
    {
       cout << "balanced\n";
-      cout << "( (-1)^f(1)|0> + (-1)^f(0)|1> )/sqrt(2)\n";
-      cout << "= (-(|0> - |1>))/sqrt(2)\n";
+      cout << "-|1> xor (|0> - |1>)/sqrt(2)\n";
    }
    
    return 0;
