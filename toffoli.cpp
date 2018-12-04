@@ -1,3 +1,8 @@
+/*
+  By: Navraj Saini
+  4110 Project
+  Implement a toffoli gate on a classical computer
+ */
 #include <iostream>
 
 using namespace std;
