@@ -155,18 +155,27 @@ void tofolli (int a, int b, int c)
       (U[8][5] * tens[5]) +
       (U[8][6] * tens[6]) +
       (U[8][7] * tens[7]);
-   
-   
-   if (a == 1 and b == 1 and c == 0)
+   cout << "the tensor after the U function is: ";
+   for (int i = 0; i < 8; i++)
    {
-      cout << "the bottom bit was flipped and the new qubits are: "
-	   << a << " " << b << " 1" << endl; 
+      cout << ret[i];
    }
-   else if (a == 1 and b == 1 and c == 1)
+   cout << endl;
+   cout << "the tensor before the U function is: ";
+   for (int i = 0; i < 8; i++)
+      cout << tens[i];
+   cout << endl;
+   
+   if (ret != tens)
    {
-      cout << "the bottom bit was flipped and the new qubits are: "
-	   << a << " " << b << " 0" << endl; 
+      if (ret[8] == 0)
+      {
+	 cout << "the bits are: " << a << " " << b << " 0" << endl;
+      }
+      else
+	 cout << "the bits are: " << a << " " << b << " 1" << endl;
    }
+   
    else
       cout << "there were no flips the qubits after cnot are: " << a << " " << b << " " << c << "." << endl;
 }
